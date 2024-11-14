@@ -8,4 +8,8 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/usuarios', [UsuariosController::class, 'control']);
+Route::get('/clientes', [UsuariosController::class, 'lista']);
+Route::get('/clientes/{id}', [UsuariosController::class, 'cliente']);
+Route::get('/clientes', [UsuariosController::class, 'crear']);
+Route::get('/clientes/{id}', [UsuariosController::class, 'actualizar']);
+Route::get('/clientes/{id}', [UsuariosController::class, 'eliminar']);
